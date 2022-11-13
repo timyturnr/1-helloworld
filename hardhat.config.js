@@ -4,11 +4,15 @@ require("@nomicfoundation/hardhat-toolbox");
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: "0.8.17",
-  networks:{
-    hardhat:{
+  paths: {
+    artifacts: './src/artifacts'
+  }
+  ,
+  networks: {
+    hardhat: {
       chainId: 1337
     },
-    goerli:{
+    goerli: {
       url: process.env.GOERLI,
       accounts: [process.env.ACCOUNT1]
     }
